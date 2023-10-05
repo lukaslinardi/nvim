@@ -27,7 +27,7 @@ return require('packer').startup(function(use)
     -- }
 
     -- use { "rebelot/kanagawa.nvim", as = 'kanagawa'}
-    use {'bluz71/vim-nightfly-colors', as = 'nightfly' }
+    use { 'AlexvZyl/nordic.nvim', as = 'nordic' }
     -- use { "catppuccin/nvim", as = "catppuccin", config = function() require("catppuccin").setup() end }
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
