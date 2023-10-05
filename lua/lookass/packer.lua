@@ -26,7 +26,9 @@ return require('packer').startup(function(use)
     --     end
     -- }
 
-    use { "rebelot/kanagawa.nvim", as = 'kanagawa'}
+    -- use { "rebelot/kanagawa.nvim", as = 'kanagawa'}
+    use {'bluz71/vim-nightfly-colors', as = 'nightfly' }
+    -- use { "catppuccin/nvim", as = "catppuccin", config = function() require("catppuccin").setup() end }
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
@@ -59,9 +61,9 @@ return require('packer').startup(function(use)
     use { 'mhartington/formatter.nvim' }
     use { 'jose-elias-alvarez/null-ls.nvim' }
     use { 'MunifTanjim/prettier.nvim' }
-    use { 'vim-airline/vim-airline' } 
-    use { 'vim-airline/vim-airline-themes' } 
-    use {'powerline/powerline'}
+    use { 'vim-airline/vim-airline' }
+    use { 'vim-airline/vim-airline-themes' }
+    use { 'powerline/powerline' }
     use {
         'numToStr/Comment.nvim',
         config = function()
