@@ -10,3 +10,4 @@ toggleterm.setup{
     persist_size = true,
     direction = "horizontal",
 }
+

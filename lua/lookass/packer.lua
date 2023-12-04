@@ -26,9 +26,12 @@ return require('packer').startup(function(use)
     --     end
     -- }
 
-    -- use { "rebelot/kanagawa.nvim", as = 'kanagawa'}
-    use { 'AlexvZyl/nordic.nvim', as = 'nordic' }
-    -- use { "catppuccin/nvim", as = "catppuccin", config = function() require("catppuccin").setup() end }
+    use { "rebelot/kanagawa.nvim", as = 'kanagawa',
+        config = function()
+            vim.cmd('colorscheme kanagawa')
+        end
+    }
+  
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
