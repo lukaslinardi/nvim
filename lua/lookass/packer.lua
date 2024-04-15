@@ -18,20 +18,30 @@ return require('packer').startup(function(use)
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
-    -- use {
-    --     'folke/tokyonight.nvim',
-    --     as = 'tokyonight',
+
+   use {
+        'embark-theme/vim',
+        as = 'embark',
+        config = function()
+            vim.cmd('colorscheme embark')
+        end
+    }
+
+    -- use { "rebelot/kanagawa.nvim", as = 'kanagawa',
     --     config = function()
-    --         vim.cmd('colorscheme tokyonight')
+    --         vim.cmd('colorscheme kanagawa')
     --     end
     -- }
 
-    use { "rebelot/kanagawa.nvim", as = 'kanagawa',
-        config = function()
-            vim.cmd('colorscheme kanagawa')
-        end
-    }
-  
+    -- use {
+    --     'AlexvZyl/nordic.nvim',
+    --     as = 'nordic',
+    --     config = function()
+    --         vim.cmd('colorscheme nordic')
+    --     end
+    -- }
+
+
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
