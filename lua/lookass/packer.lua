@@ -9,7 +9,7 @@ local ensure_packer = function()
     return false
 end
 
-local packer_bootstrap = ensure_packer()
+--local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
@@ -19,12 +19,12 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-   use {
+    use {
         'embark-theme/vim',
         as = 'embark',
         config = function()
             vim.cmd('colorscheme embark')
-        end
+       end
     }
 
     -- use { "rebelot/kanagawa.nvim", as = 'kanagawa',
@@ -71,11 +71,17 @@ return require('packer').startup(function(use)
     use { "akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
     end }
+
     use { 'mhartington/formatter.nvim' }
     use { 'jose-elias-alvarez/null-ls.nvim' }
     use { 'MunifTanjim/prettier.nvim' }
-    use { 'vim-airline/vim-airline' }
-    use { 'vim-airline/vim-airline-themes' }
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+        config = function()
+            require("lualine").setup()
+        end
+    }
     use { 'powerline/powerline' }
     use {
         'numToStr/Comment.nvim',
@@ -87,9 +93,9 @@ return require('packer').startup(function(use)
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
-
     use {
         "windwp/nvim-ts-autotag",
         config = function() require("nvim-ts-autotag").setup {} end
     }
+
 end)
