@@ -24,7 +24,7 @@ return require('packer').startup(function(use)
         as = 'embark',
         config = function()
             vim.cmd('colorscheme embark')
-       end
+        end
     }
 
     -- use { "rebelot/kanagawa.nvim", as = 'kanagawa',
@@ -68,6 +68,9 @@ return require('packer').startup(function(use)
             { 'rafamadriz/friendly-snippets' }, -- Required
         }
     }
+
+--    use { "stevearc/conform.nvim" }
+
     use { "akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
     end }
@@ -98,4 +101,5 @@ return require('packer').startup(function(use)
         config = function() require("nvim-ts-autotag").setup {} end
     }
 
+    use { 'darrikonn/vim-gofmt' }
 end)
