@@ -56,14 +56,12 @@ return require('packer').startup(function(use)
         }
     }
 
---    use { "stevearc/conform.nvim" }
-
     use { "akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
     end }
 
     use { 'mhartington/formatter.nvim' }
-    use { 'jose-elias-alvarez/null-ls.nvim' }
+    use { "stevearc/conform.nvim" }
     use { 'MunifTanjim/prettier.nvim' }
     use {
         'nvim-lualine/lualine.nvim',
