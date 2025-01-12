@@ -1,1 +1,1 @@
-require("lookass")
+require("config")
