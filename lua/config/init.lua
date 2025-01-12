@@ -1,5 +1,3 @@
 require("config.remap")
 require("config.set")
-require("config.color")
-require("config.go")
 require("config.lazy")
