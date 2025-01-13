@@ -62,7 +62,6 @@ require("lazy").setup({
 				vim.cmd("colorscheme mellifluous")
 			end,
 		},
-		--
 		{
 			"nvim-treesitter/nvim-treesitter",
 			build = ":TSUpdate",
