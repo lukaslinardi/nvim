@@ -9,6 +9,7 @@ conform.setup({
         javascriptreact = { "prettierd", "prettier" },
         typescriptreact = { "prettierd", "prettier" },
         go = { "goimports", "gofmt", "gopls" },
+        java = {"java-language-server"}
     },
     stop_after_first = true, -- Ensure this is applied correctly
 })
