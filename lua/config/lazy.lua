@@ -55,12 +55,17 @@ require("lazy").setup({
 		--         vim.cmd('colorscheme nordic')
 		--     end
 		-- }
-
+		--
+		{
+			"ellisonleao/gruvbox.nvim", -- example: github_light comes from this
+			lazy = false, -- load at startup so you can switch instantly
+		},
 		{
 			"ramojus/mellifluous.nvim",
-			config = function()
-				vim.cmd("colorscheme mellifluous")
-			end,
+			lazy = false,
+			-- config = function()
+			-- 	vim.cmd("colorscheme mellifluous")
+			-- end,
 		},
 		{
 			"nvim-treesitter/nvim-treesitter",
@@ -76,11 +81,12 @@ require("lazy").setup({
 				require("plugins.harpoon")
 			end,
 		},
-		{ "mbbill/undotree",
+		{
+			"mbbill/undotree",
 			config = function()
 				require("plugins.undotree")
 			end,
-        },
+		},
 		{
 			"tpope/vim-fugitive",
 			config = function()
@@ -97,11 +103,12 @@ require("lazy").setup({
 				{ "williamboman/mason-lspconfig.nvim" }, -- Optional
 
 				-- Autocompletion
-				{ "hrsh7th/nvim-cmp",
-                    config = function()
-                        require("plugins.cmp")
-                    end,
-                }, -- Required
+				{
+					"hrsh7th/nvim-cmp",
+					config = function()
+						require("plugins.cmp")
+					end,
+				}, -- Required
 				{ "hrsh7th/cmp-buffer" }, -- Required
 				{ "hrsh7th/cmp-path" }, -- Required
 				{ "saadparwaiz1/cmp_luasnip" },
@@ -116,12 +123,12 @@ require("lazy").setup({
 			end,
 		},
 
-		{ "lukas-reineke/indent-blankline.nvim",
+		{
+			"lukas-reineke/indent-blankline.nvim",
 			config = function()
 				require("plugins.ibl")
 			end,
-
-        },
+		},
 		{
 			"folke/trouble.nvim",
 			dependencies = { "nvim-tree/nvim-web-devicons" },
